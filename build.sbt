@@ -1,4 +1,10 @@
-cancelable := true
+organization := "com.kentech-sp"
+
+name := "scala-exercises"
+
+version := "0.1.0"
+
+scalaVersion := "2.12.4"
 
 developers := List(
   Developer("jhcasado",
@@ -39,9 +45,6 @@ logLevel in compile := Level.Warn
 // Level.INFO is needed to see detailed output when running tests
 logLevel in test := Level.Info
 
-name := "scala-exercises"
-
-organization := "com.micronautics"
 
 resolvers ++= Seq(
 )
@@ -104,8 +107,6 @@ scalacOptions in (Compile, doc) ++= baseDirectory.map {
   )
 }.value
 
-scalaVersion := "2.12.4"
-
 scmInfo := Some(
   ScmInfo(
     url(s"https://github.com/jhcasado/$name"),
@@ -115,4 +116,4 @@ scmInfo := Some(
 
 sublimeTransitive := true
 
-version := "0.1.0"
+cancelable := true

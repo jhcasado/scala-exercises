@@ -1,5 +1,7 @@
 package animals
 
+import scala.language.reflectiveCalls
+
 class UselessAnimal(numLegs: Int, breathesAir: Boolean)
 
 
