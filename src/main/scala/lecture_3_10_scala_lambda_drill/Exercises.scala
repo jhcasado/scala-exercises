@@ -3,10 +3,10 @@ package lecture_3_10_scala_lambda_drill
 object Exercises extends App {
   // DRILL 1
   // Which of these define the same Function1?
-  val fn = (x: Int) => x * 2                // 1
-  val fn: Int => Int = _ * 2                // 2
-  val fn: Function1[Int, Int] = x => x * 2  // 3
-  val fn = (_:Int) * 2                      // 4
+  val fn11 = (x: Int) => x * 2                // 1
+  val fn12: Int => Int = _ * 2                // 2
+  val fn13: Function1[Int, Int] = x => x * 2  // 3
+  val fn14 = (_:Int) * 2                      // 4
 
   // Answer: All
 
@@ -35,17 +35,17 @@ object Exercises extends App {
 
   // DRILL 4
   // Which of these define the same Function2?
-  val fn = (str: String, i: Int) => str * i                 // 1
-  val fn: (String, Int) => String = _ * _                   // 2
-  val fn: Function2[String, Int, String] = (x, y) => x * y  // 3
-  val fn = (_: String) * (_:Int)                            // 4
+  val fn41 = (str: String, i: Int) => str * i                 // 1
+  val fn42: (String, Int) => String = _ * _                   // 2
+  val fn43: Function2[String, Int, String] = (x, y) => x * y  // 3
+  val fn44 = (_: String) * (_:Int)                            // 4
 
   // Answer: All
 
 
   // DRILL 5
   // Which are shorthand equivalents for the following long form FunctionN type?
-  Function3[String, Int, Int, Boolean]
+  val fn5: Function3[String, Int, Int, Boolean] = ???
   // 1. (String) => (Int) => (Int) => (Boolean)
   // 2. (String, Int, Int, Boolean)
   // 3. (String, Int, Int) => Boolean
@@ -56,10 +56,11 @@ object Exercises extends App {
 
   // SPARK
   // The Spark documentation shows this method signature:
-  def subgraph(
-                epred: EdgeTriplet[VD,ED] => Boolean = (x => true),
-                vpred: (VertexId, VD) => Boolean = ((v, d) => true))
-  : Graph[VD, ED]
+  // def subgraph(
+  //              epred: EdgeTriplet[VD,ED] => Boolean = (x => true),
+  //              vpred: (VertexId, VD) => Boolean = ((v, d) => true))
+  //: Graph[VD, ED]
+
   // 1. Explain the type of epred.
   // It is a function1 that takes a parameter of type EdgeTriplet[VD, ED], and returns a Boolean
 

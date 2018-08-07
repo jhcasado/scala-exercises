@@ -1,0 +1,5 @@
+object Hello extends App {
+    var i = 5
+    i * i + 3
+    res0 - i
+}

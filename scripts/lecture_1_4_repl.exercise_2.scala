@@ -1,0 +1,5 @@
+def repeat(str: String, times: Int) = for (i <- 0 until times) println(str)
+repeat("test0", 0)
+repeat("test1", 1)
+repeat("test2", 2)
+repeat("test3", 3)
